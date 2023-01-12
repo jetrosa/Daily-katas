@@ -9,7 +9,7 @@ function reorder(originalString){
     //combine the results in the variables
     const result = upperChars + lowerChars + numbers;
     return result
-  }
+}
 
 //reorder function version 2
 function reorder2(originalString){
@@ -31,4 +31,4 @@ function reorder2(originalString){
     //combine the results in the variables
     const result = upperChars + lowerChars + numbers;
     return result
-  }
+}
