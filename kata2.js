@@ -11,7 +11,7 @@ function consecutiveSum(selectedNumber){
     /*iterate until the sum matches the selected number or
       until the first number is too high 
      */
-    while(sum!=selectedNumber && first < selectedNumber){ 
+    while(sum!=selectedNumber && first < (selectedNumber/2)){ 
       sum = 0;
       while(sum < selectedNumber){
         sum += addNumber;
