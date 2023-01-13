@@ -28,3 +28,24 @@ function consecutiveSum(selectedNumber){
   console.log(consecutiveSum(9));
   console.log(consecutiveSum(10));
   console.log(consecutiveSum(64));
+
+
+function consecutiveSum2(num){
+    //validate number
+    if(isNaN(num))return false;
+    if(num<2)return false;
+    
+    for(let i = 1; i < (num/2); i++){
+      let sum = 0;
+      
+      for(let j = i; j<num; j++){
+        sum += j;
+        if(sum == num){return true;}
+      }
+    }
+    return false;
+  }
+
+console.log(consecutiveSum2(9));
+console.log(consecutiveSum2(10));
+console.log(consecutiveSum2(64));
