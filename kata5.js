@@ -5,7 +5,7 @@ containing numbers, return an empty array.
 */
 
 const numInStr = (arr) => {
-  let newArr = [];
+  const newArr = [];
   for (const str of arr) {
     for (const char of str) {
       if (!isNaN(char) && char != " ") {
@@ -23,3 +23,4 @@ console.log(numInStr(["abc", "ab10c", "a10bc", "bcd"])); // ➞ ["ab10c", "a10bc
 console.log(numInStr(["this is a test", "test1"])); // ➞ ["test1"]
 console.log(numInStr(["who needs numbers", "not me"])); // ➞ []
 console.log(numInStr(["!!", "##", "@"])); // ➞ []
+
