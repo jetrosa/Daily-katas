@@ -7,14 +7,14 @@ howUnlucky(2016) ➞ 1
 */
 
 const howUnlucky = (year) => {
-  const date = new Date(year,0,13);
+  const date = new Date(Date.UTC(year, 0, 13));
 
   let friday13 = 0;
   for (let i = 0; i < 12; i++) {
-    if (date.getUTCDay() === 6) {
+    date.setUTCMonth(i);
+    if (date.getUTCDay() === 5) {
       friday13++;
     }
-    date.setUTCMonth(date.getUTCMonth() + 1);
   }
 
   return friday13;
