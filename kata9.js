@@ -17,26 +17,24 @@ const noStrangers = (str) => {
   str = str.replace(/[^\w\s\']|_/g, "");
   const words = str.toLowerCase().split(" ");
 
-  const wordMap = new Map();
+  const wordMap = {};
 
   for (let i = 0; i < words.length; i++) {
     if (wordMap[words[i]] === undefined) {
-      wordMap[words[i]] = 0;
+      wordMap[words[i]] = 1;
     }else{
         wordMap[words[i]]++
     }
   }
 
-  for (let [key, value] of wordMap.entries()) {
-    console.log(value);
-
-    if (value > 4) {
-      friends.push(item);
-    } else if (value > 2) {
-      acquaintances.push(item);
+  for (const word in wordMap) {
+    if (wordMap[word] > 4) {
+      friends.push(word);
+    } else if (wordMap[word] > 2) {
+      acquaintances.push(word);
     }
   }
   return [acquaintances, friends];
 };
 
-noStrangers("See Spot run. See Spot jump. Spot likes jumping. See Spot fly.");
+console.log(noStrangers("See Spot run. See Spot jump. Spot likes jumping. See Spot fly."));
