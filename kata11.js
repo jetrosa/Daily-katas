@@ -11,7 +11,6 @@ const pigLatinSentence = (sentence) => {
   const pigWords = [];
 
   for (const word of words) {
-    console.log(word);
     for (let i = 0; i < word.length; i++) {
       if (word[i] === "a"||word[i] === "e"||word[i] === "i"||word[i] === "o"||word[i] === "u"||word[i] === "y") {
         if (i === 0) {
@@ -27,7 +26,7 @@ const pigLatinSentence = (sentence) => {
       }
     }
   }
-  return pigWords;
+  return pigWords.join(" ");
 };
 
 console.log(pigLatinSentence("this is pig latin")); //➞ "isthay isway igpay atinlay"
